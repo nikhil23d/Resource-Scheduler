@@ -1,0 +1,28 @@
+.time-column {
+  position: relative;
+  height: 100%;
+  
+  .time-header {
+    height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .hour-block {
+    position: relative;
+    
+    .hour-label {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      font-size: 13px;
+      color: #5f6368;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .time-slot {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+}

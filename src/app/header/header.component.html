@@ -1,0 +1,31 @@
+<header class="app-header">
+  <div class="left-section">
+    <h1>Appointments</h1>
+    
+    <div class="actions">
+      <button mat-button [matMenuTriggerFor]="copyMenu" class="menu-button">
+        <span>Copy</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #copyMenu="matMenu">
+        <button mat-menu-item>Copy Day</button>
+        <button mat-menu-item>Copy Week</button>
+      </mat-menu>
+      
+      <div class="date-display">{{ formattedDate }}</div>
+    </div>
+  </div>
+  
+  <div class="center-section">
+    <button mat-button class="view-button active">Day</button>
+    <button mat-button class="view-button">Week</button>
+    <button mat-button class="today-button">Today</button>
+  </div>
+  
+  <div class="right-section">
+    <button mat-button class="aid-button">
+      <mat-icon>add</mat-icon>
+      <span>Aid +</span>
+    </button>
+  </div>
+</header>

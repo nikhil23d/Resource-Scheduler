@@ -1,0 +1,27 @@
+<div class="scheduler" [style.height.px]="totalHeight">
+  <div class="time-column-container">
+    <app-time-column 
+      [config]="config"
+      [pixelsPerHour]="pixelsPerHour"
+    ></app-time-column>
+  </div>
+  
+  <div class="resources-container">
+    <div *ngFor="let resource of resources" class="resource-column">
+      <div class="resource-header">{{ resource.name }}</div>
+      <app-resource-column 
+        [resource]="resource"
+        [appointments]="appointments"
+        [config]="config"
+        [pixelsPerMinute]="pixelsPerMinute"
+      ></app-resource-column>
+    </div>
+  </div>
+  
+  <app-current-time 
+    *ngIf="shouldShowCurrentTime()"
+    [currentTime]="currentTime"
+    [config]="config"
+    [pixelsPerMinute]="pixelsPerMinute"
+  ></app-current-time>
+</div>

@@ -1,0 +1,9 @@
+<div class="resource-column">
+  <ng-container *ngFor="let appointment of getAppointmentsForResource()">
+    <app-appointment-block 
+      [appointment]="appointment"
+      [top]="calculatePosition(appointment.start)"
+      [height]="calculateHeight(appointment.start, appointment.end)"
+    ></app-appointment-block>
+  </ng-container>
+</div>

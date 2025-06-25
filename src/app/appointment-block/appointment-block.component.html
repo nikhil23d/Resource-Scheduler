@@ -1,0 +1,12 @@
+<div 
+  class="appointment-block"
+  [class.appointment]="appointment.type === 'appointment'"
+  [class.unavailable]="appointment.type === 'unavailable'"
+  [style.top.px]="top"
+  [style.height.px]="height"
+>
+  <div class="appointment-title">{{ appointment.title }}</div>
+  <div class="appointment-time">
+    {{ getTimeString(appointment.start) }} - {{ getTimeString(appointment.end) }}
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.scheduler {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  .time-column-container {
+    width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .resources-container {
+    display: flex;
+    flex: 1;
+    
+    .resource-column {
+      flex: 1;
+      min-width: 200px;
+      border-left: 1px solid #e0e0e0;
+      
+      .resource-header {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+    }
+  }
+}
