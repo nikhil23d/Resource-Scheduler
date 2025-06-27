@@ -130,12 +130,11 @@
 }
 
 .toggle-button.active {
-  background-color: #33005A; /* Deep Purple */
+  background-color: #33005A; 
   color: white;
 }
 
 
-/* Backdrop */
 .popup-backdrop {
   position: fixed;
   inset: 0;
@@ -144,7 +143,6 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Modal Box */
 .popup-form {
   position: fixed;
   top: 20%;
