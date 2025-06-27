@@ -14,10 +14,18 @@ export class CurrentTimeComponent {
   @Input() config!: SchedulerConfig;
   @Input() pixelsPerMinute!: number;
   
-  get position(): number {
-    const hours = this.currentTime.getHours();
-    const minutes = this.currentTime.getMinutes();
-    const minutesFromStart = (hours - this.config.startHour) * 60 + minutes;
-    return minutesFromStart * this.pixelsPerMinute;
-  }
+
+  get currentTimeInIST(): Date {
+  const nowUTC = new Date(new Date().toUTCString());
+  const IST_OFFSET_MINUTES = 0;
+  return new Date(nowUTC.getTime() + IST_OFFSET_MINUTES * 60000);
+}
+
+ get position(): number {
+  const currentIST = this.currentTimeInIST;
+  const hours = currentIST.getHours();
+  const minutes = currentIST.getMinutes();
+  const minutesFromStart = (hours - this.config.startHour) * 60 + minutes;
+  return minutesFromStart * this.pixelsPerMinute;
+}
 }

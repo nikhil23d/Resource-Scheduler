@@ -104,15 +104,15 @@ config: SchedulerConfig = {
     { 
     id: 1, 
     title: 'JADES', 
-    start: new Date(2025, 1, 19, 15, 0), 
-    end: new Date(2025, 1, 19, 15, 30),
+    start: new Date(2025, 1, 19, 12, 0), 
+    end: new Date(2025, 1, 19, 12, 30),
     resourceId: 1,
     type: 'appointment'
   },
   { 
     id: 2, 
     title: 'EMIA', 
-    start: new Date(2025, 1, 19, 15, 0), 
+    start: new Date(2025, 1, 19, 13, 0), 
     end: new Date(2025, 1, 19, 15, 30),
     resourceId: 2,
     type: 'appointment'
@@ -120,8 +120,8 @@ config: SchedulerConfig = {
   { 
     id: 3, 
     title: 'ANE', 
-    start: new Date(2025, 1, 19, 15, 0), 
-    end: new Date(2025, 1, 19, 15, 30),
+    start: new Date(2025, 1, 19, 14, 0), 
+    end: new Date(2025, 1, 19, 14, 30),
     resourceId: 3,
     type: 'appointment'
   },

@@ -4,6 +4,7 @@
   [class.unavailable]="appointment.type === 'unavailable'"
   [style.top.px]="top"
   [style.height.px]="height"
+  [style.background-color]="getAppointmentColor(appointment)"
 >
   <div class="appointment-title">{{ appointment.title }}</div>
   <div class="appointment-time">

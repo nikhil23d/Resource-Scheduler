@@ -1,4 +1,4 @@
 <div class="current-time-indicator" [style.top.px]="position">
-  <div class="time-dot"></div>
+  <div class="time-badge">{{ currentTime | date:'shortTime':'Asia/Kolkata' }}</div>
   <div class="time-line"></div>
 </div>

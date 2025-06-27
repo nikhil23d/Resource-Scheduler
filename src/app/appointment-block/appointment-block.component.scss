@@ -9,9 +9,9 @@
   font-size: 12px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   
-  &.appointment {
-    background-color: #e3f2fd;
+ &.appointment {
     border-left: 4px solid #2196f3;
+    background-color: unset; /* or remove */
   }
   
   &.unavailable {
@@ -31,4 +31,16 @@
     color: #666;
     font-size: 11px;
   }
+}
+
+
+.appointment-block {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.appointment-block:hover {
+  transform: scale(1.03); /* Slight zoom/spread effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: soft shadow */
+  z-index: 10; /* Makes sure it overlaps nearby columns */
 }

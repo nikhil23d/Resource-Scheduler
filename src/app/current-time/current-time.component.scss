@@ -22,3 +22,36 @@
     box-shadow: 0 0 3px rgba(244, 67, 54, 0.5);
   }
 }
+
+
+.current-time-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.time-badge {
+  background-color: #f44336; /* Red */
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 4px;
+  position: absolute;
+  margin-top: 20px;
+  // left: -30px;
+  transform: translateY(-50%);
+}
+
+.time-line {
+  height: 1px;
+  background-color: #f44336; /* Red */
+  flex-grow: 1;
+  margin-left: 32px;
+  margin-right: 4px;
+}
