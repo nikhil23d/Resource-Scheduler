@@ -17,7 +17,7 @@ export class CurrentTimeComponent {
 
   get currentTimeInIST(): Date {
   const nowUTC = new Date(new Date().toUTCString());
-  const IST_OFFSET_MINUTES = 0;
+  const IST_OFFSET_MINUTES = 80;
   return new Date(nowUTC.getTime() + IST_OFFSET_MINUTES * 60000);
 }
 
@@ -25,7 +25,7 @@ export class CurrentTimeComponent {
   const currentIST = this.currentTimeInIST;
   const hours = currentIST.getHours();
   const minutes = currentIST.getMinutes();
-  const minutesFromStart = (hours - this.config.startHour) * 100 + minutes;
+  const minutesFromStart = (hours - this.config.startHour) * 60 + minutes;
   return minutesFromStart * this.pixelsPerMinute;
 }
 }
