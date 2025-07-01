@@ -33,12 +33,15 @@ export class ResourceColumnComponent {
   calculatePosition(start: Date): number {
     const startHour = start.getHours();
     const startMinute = start.getMinutes();
-    const minutesFromStart = (startHour - this.config.startHour) * 60 + startMinute;
+    const minutesFromStart = (startHour - this.config.startHour) * 82 + startMinute;
     return minutesFromStart * this.pixelsPerMinute;
   }
   
   calculateHeight(start: Date, end: Date): number {
-    const durationMinutes = (end.getTime() - start.getTime()) / (1000 * 60);
+    const durationMinutes = (end.getTime() - start.getTime()) / (1000 * 35);
     return durationMinutes * this.pixelsPerMinute;
   }
+  trackByAppointment(index: number, appointment: any): number {
+  return appointment.id;
+}
 }

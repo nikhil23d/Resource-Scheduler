@@ -33,8 +33,6 @@ newAppointment = {
 
   submitAppointment() {
   console.log('Saved:', this.newAppointment);
-  // You can push it to appointments array if needed
-  // this.appointments.push({ ...this.newAppointment, id: Date.now(), type: 'appointment' });
   this.closePopup();
 }
 

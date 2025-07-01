@@ -1,111 +1,48 @@
 .app-header {
+  background-color: #fff;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
-  background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  
-  .left-section {
-    display: flex;
-    align-items: center;
-    
-    h1 {
-      margin: 0;
-      font-size: 20px;
-      font-weight: 600;
-      margin-right: 24px;
-    }
-    
-    .actions {
-      display: flex;
-      align-items: center;
-      
-      .menu-button {
-        display: flex;
-        align-items: center;
-        // background-color: #f5f5f5;
-        border-radius: 4px;
-        padding: 6px 12px;
-        font-size: 14px;
-        font-weight: 500;
-        
-        mat-icon {
-          margin-left: 4px;
-          font-size: 18px;
-          height: 18px;
-          width: 18px;
-        }
-      }
-      
-      .date-display {
-        margin-left: 16px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #5f6368;
-      }
-    }
-  }
-  
-  .center-section {
-    display: flex;
-    align-items: center;
-    
-    .view-button {
-      margin: 0 8px;
-      padding: 6px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #5f6368;
-      
-      &.active {
-        background-color: #e8f0fe;
-        color: #33005A;
-        border-radius: 4px;
-      }
-    }
-    
-    .today-button {
-      margin-left: 16px;
-      padding: 6px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      background-color: #f1f3f4;
-      border-radius: 4px;
-    }
-  }
-  
-  .right-section {
-    .aid-button {
-      display: flex;
-      align-items: center;
-      background-color: #33005A;
-      color: white;
-      border-radius: 20px !important;
-      padding: 6px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      
-      mat-icon {
-        margin-right: 8px;
-        font-size: 18px;
-        height: 18px;
-        width: 18px;
-      }
-    }
-  }
+  gap: 12px;
 }
-.aid-button {
-  background-color: #33005A;
-  color: white;
-  padding: 6px 16px;
-  border: none;
-  border-radius: 999px;
-  font-weight: 500;
+
+.left-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.today-button-wrap {
+  display: flex;
+}
+
+.date-display {
   font-size: 14px;
-  cursor: pointer;
-  height: 40px;
+  color: #555;
+}
+
+
+.center-section {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .toggle-button-group {
@@ -113,25 +50,67 @@
   border: 1px solid #ccc;
   border-radius: 999px;
   overflow: hidden;
-  background-color: white;
-  height: 40px;
 }
 
 .toggle-button {
   padding: 6px 16px;
   border: none;
-  outline: none;
-  font-weight: 500;
-  cursor: pointer;
   background-color: white;
   color: black;
   font-size: 14px;
+  cursor: pointer;
   transition: 0.3s;
+      height: 38px;
 }
 
 .toggle-button.active {
-  background-color: #33005A; 
+  background-color: #33005a;
   color: white;
+}
+
+.right-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.aid-button {
+  background-color: #33005a;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+      height: 38px;
+}
+
+.aid-button:hover {
+  background-color: #4b0082;
+}
+
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .center-section,
+  .right-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .toggle-button-group {
+    // width: 100%;
+    justify-content: center;
+  }
+
+  .right-section {
+    // justify-content: center;
+    margin-top: 8px;
+  }
 }
 
 
@@ -157,8 +136,6 @@
   animation: slideUp 0.3s ease-out;
   font-family: 'Segoe UI', sans-serif;
 }
-
-/* Form Title */
 .popup-form h3 {
   margin-top: 0;
   margin-bottom: 16px;
@@ -168,7 +145,6 @@
   text-align: center;
 }
 
-/* Input Fields */
 .popup-form input,
 .popup-form select {
   width: 100%;
@@ -188,14 +164,12 @@
   box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.2);
 }
 
-/* Button Row */
 .popup-actions {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
-/* Buttons */
 .popup-actions button {
   padding: 8px 16px;
   font-size: 14px;
@@ -253,3 +227,5 @@
   gap: 12px;
   margin-right: 28px;
 }
+
+

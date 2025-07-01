@@ -1,4 +1,4 @@
-<div class="scheduler" [style.height.px]="totalHeight">
+<div class="scheduler" >
   <div class="time-column-container">
     <app-time-column 
       [config]="config"
@@ -7,7 +7,7 @@
   </div>
   
   <div class="resources-container">
-    <div *ngFor="let resource of resources" class="resource-column">
+    <div *ngFor="let resource of resources; trackBy: trackByResource" class="resource-column">
       <div class="resource-header">{{ resource.name }}</div>
       <app-resource-column 
         [resource]="resource"

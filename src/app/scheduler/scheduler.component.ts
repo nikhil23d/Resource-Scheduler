@@ -265,4 +265,8 @@ config: SchedulerConfig = {
   const currentHour = this.currentTime.getHours();
   return currentHour >= this.config.startHour && currentHour < this.config.endHour;
 }
+
+trackByResource(index: number, resource: any): number {
+  return index;
+}
 }

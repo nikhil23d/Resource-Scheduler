@@ -1,5 +1,5 @@
 <div class="resource-column">
-  <ng-container *ngFor="let appointment of getAppointmentsForResource()">
+  <ng-container *ngFor="let appointment of getAppointmentsForResource(); trackBy: trackByAppointment">
     <app-appointment-block 
       [appointment]="appointment"
       [top]="calculatePosition(appointment.start)"

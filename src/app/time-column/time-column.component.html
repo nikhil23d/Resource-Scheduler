@@ -1,10 +1,10 @@
 <div class="time-column">
   <div class="time-header"></div>
   
-  <div *ngFor="let hour of hours" class="hour-block">
+  <div *ngFor="let hour of hours; trackBy: trackByHour" class="hour-block">
     <div class="hour-label">{{ formatHour(hour) }}</div>
     
-    <div *ngFor="let slot of getSlots()" 
+    <div *ngFor="let slot of getSlots(); trackBy: trackBySlot" 
          class="time-slot" 
          [style.height.px]="getSlotHeight()">
     </div>

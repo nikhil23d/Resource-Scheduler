@@ -33,5 +33,13 @@ export class TimeColumnComponent {
   getSlots(): any[] {
   return new Array(60 / this.config.slotDuration);
 }
+
+trackByHour(index: number, hour: any): number {
+  return index; 
+}
+
+trackBySlot(index: number, slot: any): number {
+  return index;
+}
   
 }

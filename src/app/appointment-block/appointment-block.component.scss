@@ -40,7 +40,7 @@
 }
 
 .appointment-block:hover {
-  transform: scale(1.03); /* Slight zoom/spread effect */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: soft shadow */
-  z-index: 10; /* Makes sure it overlaps nearby columns */
+  transform: scale(1.03); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  z-index: 10; 
 }

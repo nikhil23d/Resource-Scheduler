@@ -21,7 +21,7 @@ export class AppointmentBlockComponent {
   getAppointmentColor(appointment: any): string {
   if (appointment.type !== 'appointment') return '';
 
-  const timeKey = this.getTimeString(appointment.start); // e.g., '09:00'
+  const timeKey = this.getTimeString(appointment.start);
   const colors = [
     '#e1f5fe', '#ffebee', '#e8f5e9', '#fff3e0',
     '#ede7f6', '#fce4ec', '#f3e5f5', '#fbe9e7',
