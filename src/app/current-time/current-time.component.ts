@@ -25,7 +25,7 @@ export class CurrentTimeComponent {
   const currentIST = this.currentTimeInIST;
   const hours = currentIST.getHours();
   const minutes = currentIST.getMinutes();
-  const minutesFromStart = (hours - this.config.startHour) * 124 + minutes;
+  const minutesFromStart = (hours - this.config.startHour) * 100 + minutes;
   return minutesFromStart * this.pixelsPerMinute;
 }
 }
